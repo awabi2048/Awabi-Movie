@@ -1,0 +1,63 @@
+{
+    "pools": [
+      {
+        "rolls": 1,
+        "entries": [
+          {
+            "type": "minecraft:item",
+            "name": "minecraft:crossbow",
+            "functions": [
+              {
+                "function": "minecraft:set_name",
+                "entity": "this",
+                "name": {
+                  "text": "【AwabiMovie】 設定ツール",
+                  "color": "yellow",
+                  "bold": true,
+                  "italic": false
+                }
+              },
+              {
+                "function": "minecraft:set_lore",
+                "entity": "this",
+                "lore": [
+                  [
+                    {
+                      "text": "|| 新しいムービーを作成 ",
+                      "color": "white",
+                      "italic": false
+                    },
+                    {
+                      "text": "(右クリック)",
+                      "color": "yellow",
+                      "italic": false,
+                      "bold": true
+                    }
+                  ],
+                  [
+                    {
+                      "text": "|| 設定画面を開く ",
+                      "color": "white",
+                      "italic": false
+                    },
+                    {
+                      "text": "(シフト + 右クリック)",
+                      "color": "yellow",
+                      "italic": false,
+                      "bold": true
+                    }
+                  ]
+                ],
+                "replace": true
+              },
+              {
+                "function": "minecraft:set_nbt",
+                "tag": "{CustomModelData:8080000,AwabiMovie:{IsTool:true,Tool:{Level:0,Mode:\"CreateNew\"}},Charged:true}"
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+  

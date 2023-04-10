@@ -1,0 +1,12 @@
+{
+  "criteria": {
+    "requirement": {
+      "trigger": "minecraft:shot_crossbow",
+      "conditions": {
+        "item": {
+          "nbt": "{AwabiMovie:{IsTool:true}}"
+        }
+      }
+    }
+  }
+}

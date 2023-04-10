@@ -1,0 +1,17 @@
+[
+  {
+      "function": "copy_nbt",
+      "source": {
+          "type": "storage",
+          "source": "awabi_movie:temp"
+      },
+      "ops": [
+          {
+          "op": "replace",
+          "source": "Tool.SwapMode.To",
+          "target": "AwabiMovie.Tool.Mode"
+          }
+      ]
+  }
+]
+
