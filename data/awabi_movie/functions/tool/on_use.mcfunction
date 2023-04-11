@@ -12,19 +12,25 @@ tag @s add AwabiMovie.ToolUsing
 # 使用モード検知
 data modify storage awabi_movie:temp Tool.Mode set from entity @s SelectedItem.tag.AwabiMovie.Tool.Mode
 
-# Mode別処理
+#> Mode別処理
 # CreateNew
 execute if data storage awabi_movie:temp {Tool:{Mode:"CreateNew"}} if data storage awabi_movie:temp {Tool:{Level:0}} run function awabi_movie:tool/create_new/note
 execute if data storage awabi_movie:temp {Tool:{Mode:"CreateNew"}} if data storage awabi_movie:temp {Tool:{Level:1}} run function awabi_movie:tool/create_new/summon
 execute if data storage awabi_movie:temp {Tool:{Mode:"CreateNew"}} if data storage awabi_movie:temp {Tool:{Level:2}} run function awabi_movie:tool/create_new/summon
 execute if data storage awabi_movie:temp {Tool:{Mode:"CreateNew"}} if data storage awabi_movie:temp {Tool:{Level:3}} run function awabi_movie:tool/create_new/confirm
 
+# Setting
+execute if data storage awabi_movie:temp {Tool:{Mode:"Setting"}} if data storage awabi_movie:temp {Tool:{Level:0}} run function awabi_movie:tool/setting/note
+execute if data storage awabi_movie:temp {Tool:{Mode:"Setting"}} if data storage awabi_movie:temp {Tool:{Level:1}} run function awabi_movie:tool/setting/enter
+
 # Level更新
 execute store result score $ToolLevel AwabiMovie run data get storage awabi_movie:temp Tool.Level
 execute store result storage awabi_movie:temp Tool.Level int 1 run scoreboard players add $ToolLevel AwabiMovie 1
 
-
+# List
 execute if data storage awabi_movie:temp {Tool:{Mode:"List"}} if data storage awabi_movie:temp {Tool:{Level:1}} run function awabi_movie:tool/list/_
+
+
 
 
 item modify entity @s weapon.mainhand awabi_movie:set_level
