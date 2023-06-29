@@ -5,6 +5,8 @@ scoreboard objectives add AwabiMovie.Id dummy
 scoreboard objectives add AwabiMovie.Link dummy
 scoreboard objectives add AwabiMovie.SettingId trigger
 
+scoreboard objectives add AwabiMovie.PressedQ minecraft.dropped:minecraft.crossbow 
+
 scoreboard objectives add Constant dummy
 scoreboard players set #10 Constant 10
 scoreboard players set #100 Constant 100

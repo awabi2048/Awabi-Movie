@@ -15,3 +15,6 @@ execute as @a if predicate awabi_movie:has_tool unless entity @s[tag=AwabiMovie.
 
 # モード切り替え
 execute as @a if predicate awabi_movie:mode_swap at @s run function awabi_movie:tool/swap_mode
+
+# 特殊動作: Q
+execute as @a if score @s AwabiMovie.PressedQ matches 1.. at @s anchored eyes positioned ^ ^ ^ if entity @e[type=item,distance=..0.5] at @s run function awabi_movie:tool/press_q
